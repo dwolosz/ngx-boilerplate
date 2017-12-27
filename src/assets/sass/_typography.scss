@@ -1,0 +1,20 @@
+body {
+  color: $grey;
+  font-family:  'Open Sans', "Helvetica Neue", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+}
+
+h2{
+  font-weight: 400;
+  line-height: 30px;
+}
+
+a {
+  color: $blue;
+  cursor: pointer;
+  @include transition(all, ease-in, 0.3s);
+  &:hover {
+    color: $cyan;
+  }
+}

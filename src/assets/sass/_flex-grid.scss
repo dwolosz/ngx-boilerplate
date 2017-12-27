@@ -1,0 +1,30 @@
+
+
+.row-flex {
+  display: flex;
+  flex-wrap: wrap;
+  div[class*='col-'], .col-flex {
+    padding-left: 7px;
+    padding-right: 8px;
+    display: flex;
+  }
+}
+
+.row-table {
+  display:table;
+  width:100%;
+  .table-cell {
+    display:table-cell;
+    vertical-align: top;
+  }
+}
+
+@media (max-width: $screen-md-min){
+  //disable flex on mobile
+  .row-flex {
+    display: block;
+    div [class *= 'col-' ], .col-flex {
+      display: block;
+    }
+  }
+}
