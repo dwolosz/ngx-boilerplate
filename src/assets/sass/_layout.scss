@@ -10,3 +10,13 @@
 .text-center {
   text-align: center;
 }
+
+.container{
+  position: relative;
+}
+
+app-root{
+  min-height: calc(100vh - 30px);
+  display: block;
+}
+

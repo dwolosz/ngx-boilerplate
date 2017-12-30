@@ -12,7 +12,6 @@ export class HeaderComponent implements OnInit {
     router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
         // navigation ended
-        console.log('nav ended');
       }
     });
   }

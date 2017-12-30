@@ -1,8 +1,12 @@
 @import "~assets/sass/variables";
 
-.navbar{
-  background: $grey-dark;
-  a{
-    color: white;
-  }
+header {
+    background: $grey-dark;
+    nav{
+      padding: 15px 10px;
+    }
+    a {
+      text-transform: uppercase;
+      color: white;
+    }
 }

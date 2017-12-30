@@ -8,7 +8,6 @@ import { ScrollToService, ScrollToConfigOptions } from '@nicky-lenaers/ngx-scrol
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit{
-  title = 'Wintra.Cloud';
 
   constructor(private router: Router, private scrollService: ScrollToService) { }
 

@@ -1,14 +1,10 @@
-<div class="row row-flex">
-  <div class="col-md-8">
-    <div class="error text-center" style="color: red" *ngIf="!isLoaded && apiError">
-      <i class="fa fa-warning fa-5x"></i>
-      <div>{{apiError.name}}</div>
-    </div>
+
+<div class="post" *ngIf="post">
+  <h1>
+    {{post.title}}
+  </h1>
+
+  <div>
+    {{post.body}}
   </div>
-  hello
 </div>
-<div class="col-md-4">
-  <h2>World</h2>
-</div>
-
-

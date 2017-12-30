@@ -1,0 +1,26 @@
+
+
+<div class="loading" *ngIf="settings.hasError || !settings.isLoaded">
+
+  <div class="windows8" *ngIf="!settings.hasError">
+    <div class="wBall" id="wBall_1">
+      <div class="wInnerBall"></div>
+    </div>
+    <div class="wBall" id="wBall_2">
+      <div class="wInnerBall"></div>
+    </div>
+    <div class="wBall" id="wBall_3">
+      <div class="wInnerBall"></div>
+    </div>
+    <div class="wBall" id="wBall_4">
+      <div class="wInnerBall"></div>
+    </div>
+    <div class="wBall" id="wBall_5">
+      <div class="wInnerBall"></div>
+    </div>
+  </div>
+
+  <div class="error text-center" *ngIf="settings.hasError">
+    <i class="fa fa-warning"></i> {{settings.errorMessage}}
+  </div>
+</div>

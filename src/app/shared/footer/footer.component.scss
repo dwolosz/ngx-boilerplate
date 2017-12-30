@@ -1,8 +1,10 @@
 @import "~assets/sass/variables";
 
-#footer {
+footer {
   background: $grey-dark;
   color: white;
+  position: absolute;
+  bottom: 0;
   a {
     color: $grey-light;
   }

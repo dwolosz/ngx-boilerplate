@@ -1,2 +1,14 @@
 <app-nav></app-nav>
-<router-outlet></router-outlet>
+<app-preloader></app-preloader>
+
+<div class="row">
+  <div class="col-md-9">
+    <router-outlet></router-outlet>
+  </div>
+  <div class="col-md-3">
+    <h2>Preloaded user data</h2>
+
+      <strong>{{user.name}}</strong><br>
+      <i class="fa fa-envelope"></i> {{user.email}}
+  </div>
+</div>

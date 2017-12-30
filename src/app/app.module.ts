@@ -21,9 +21,10 @@ import {FooterComponent} from './shared/footer/footer.component';
 import {SiteDashboardComponent} from './page/dashboard/dashboard.component';
 import {PageComponent} from './page/page.component';
 import {DetailsComponent} from './page/details/details.component';
-import {NavigationResolveService} from "./services/navigation-resolve.service";
+import {DataResolveService} from "./services/data-resolve.service";
 import {DatePipe} from "@angular/common";
 import { FilterPipe } from './shared/filter.pipe';
+import { PreloaderComponent } from './shared/preloader/preloader.component';
 
 
 @NgModule({
@@ -35,6 +36,7 @@ import { FilterPipe } from './shared/filter.pipe';
     PageComponent,
     DetailsComponent,
     FilterPipe,
+    PreloaderComponent,
   ],
   imports: [
     BrowserModule,
@@ -54,7 +56,7 @@ import { FilterPipe } from './shared/filter.pipe';
     Daterangepicker,
     ScrollToModule.forRoot()
   ],
-  providers: [SettingsService, HttpService, NavigationResolveService, DatePipe],
+  providers: [SettingsService, HttpService, DataResolveService, DatePipe],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

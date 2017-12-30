@@ -5,6 +5,5 @@
 
 export const environment = {
   production: false,
-    //apiUrl: 'http://wintrawpicloudweb.azurewebsites.net/query/'
-    apiUrl: 'https://wpiwebsitewintratest.azurewebsites.net/api/query/'
+    apiUrl: 'https://jsonplaceholder.typicode.com'
 };

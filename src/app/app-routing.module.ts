@@ -3,20 +3,17 @@ import {Routes, RouterModule} from '@angular/router';
 import {SiteDashboardComponent} from './page/dashboard/dashboard.component';
 import {DetailsComponent} from './page/details/details.component';
 import {PageComponent} from './page/page.component';
-import {NavigationResolveService} from "./services/navigation-resolve.service";
+import {DataResolveService} from "./services/data-resolve.service";
 
 const routes: Routes = [
   {
-    path: '', component: PageComponent,
+    path: '', component: PageComponent, resolve: { nav: DataResolveService},
     children: [
       {
-        path: '', component: SiteDashboardComponent, resolve: { nav: NavigationResolveService}
+        path: '', component: SiteDashboardComponent,
       },
       {
-        path: ':category/:id', component: SiteDashboardComponent, resolve: { nav: NavigationResolveService}
-      },
-      {
-        path: ':category/:id/:details', component: DetailsComponent, resolve: { nav: NavigationResolveService}
+        path: 'post/:id', component: DetailsComponent,
       }
     ]
   },

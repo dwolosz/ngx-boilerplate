@@ -1,16 +1,9 @@
 @import "~assets/sass/variables";
 @import "~assets/sass/mixins";
 
-.loading-shade {
-  bottom: 14px;
-  top: 0;
-  left: -15px;
-  right: -15px;
+.post-list {
+  .item {
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
 }
-
-.row .mat-card {
-  min-height: 150px;
-}
-
-
-

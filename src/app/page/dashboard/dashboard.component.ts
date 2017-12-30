@@ -1,10 +1,7 @@
-import {Component, OnDestroy, OnInit, Output} from '@angular/core';
-import {SettingsService} from "../../services/settings.service";
+import {Component, OnDestroy, OnInit} from '@angular/core';
 import {HttpService} from "../../services/http.service";
-import 'rxjs/add/observable/forkJoin'
-import {ActivatedRoute} from "@angular/router";
-import {ContextQueryBase} from "../../models/context-query-base";
-import {TableConfig} from "../../models/table-config";
+import {Router} from "@angular/router";
+import {SettingsService} from "../../services/settings.service";
 
 @Component({
   selector: 'app-site-dashboard',
@@ -13,87 +10,19 @@ import {TableConfig} from "../../models/table-config";
 })
 export class SiteDashboardComponent implements OnInit, OnDestroy {
 
-  public showSubsites: boolean;
-  public dashBoardBoxes: any;
-  public showTable: boolean = true;
+  public posts: any;
 
-  private query: ContextQueryBase;
-
-  @Output() tableDocumentsData: TableConfig;
-  @Output() tablePagesData: TableConfig;
-  @Output() tableSiteData: TableConfig;
-  @Output() itemsPerPage: number;
-
-
-  constructor(private settingsService: SettingsService, private httpService: HttpService, private route: ActivatedRoute) {
-
-  this.showSubsites = this.settingsService.contextQueryBase.includeSubSites;
-
-    this.checkDashboardType();
-    this.route.params.subscribe(
-      data =>{
-        this.checkDashboardType();
-      }
-    );
-
-    this.settingsService.pushedContextQueryBase.subscribe(
-      ()=>{
-        this.showSubsites = this.settingsService.contextQueryBase.includeSubSites;
-      }
-    )
+  constructor(private http: HttpService, private router: Router, private settings: SettingsService) {
 
   }
 
-  downloadReport(apiMethodName: string) {
-    this.httpService.getContextQueryBaseDownload(apiMethodName, this.settingsService.contextQueryBase)
-  }
-
-
-  checkDashboardType(){
-
-    let _pageType: string = this.settingsService.contextQueryBase.type;
-
-    this.dashBoardBoxes = [
-      {
-        name: _pageType + '-Dashboard-Boxes-ReadPerformance',
-        slug: 'performance'
-      },
-      {
-        name: _pageType + '-Dashboard-Boxes-ReadViewsAndVisitors',
-        slug: 'visitors'
-      },
-      {
-        name: _pageType + '-Dashboard-Boxes-ReadContentLifeCycle',
-        slug: 'lifecycle'
-      },
-      {
-        name: _pageType + '-Dashboard-Boxes-ReadTargetGroup',
-        slug: 'targetgroup'
-      },
-    ];
-
-    if (_pageType === 'Site') {
-      this.tableSiteData = {
-        name: 'Site-Dashboard-ReadSites',
-        type: 'Site'
-      };
-      this.tableDocumentsData = {
-        name: 'Site-Dashboard-ReadDocuments',
-        type: 'Document'
-      };
-      this.tablePagesData = {
-        name: 'Site-Dashboard-ReadPages',
-        type: 'Page'
-      };
-    } else {
-      this.tableSiteData = null;
-      this.tableDocumentsData = null;
-      this.tablePagesData = null;
-      this.showTable = false;
-    }
-  }
-
-  ngOnInit(){
+  ngOnInit() {
+    this.http.getHttpData('/posts', { userId: this.settings.userData.id})
+      .subscribe(
+        (data) => {
+          this.posts = data;
+        }
+      )
   }
 
   ngOnDestroy() {
