@@ -1,5 +1,6 @@
 import {NgModule} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
+
 import {SiteDashboardComponent} from './page/dashboard/dashboard.component';
 import {DetailsComponent} from './page/details/details.component';
 import {PageComponent} from './page/page.component';

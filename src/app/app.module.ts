@@ -2,14 +2,8 @@ import {BrowserModule} from '@angular/platform-browser';
 import {NgModule, CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import {HttpModule} from "@angular/http";
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {
-  MatCardModule, MatTableModule, MatSlideToggleModule,
-  MatSidenavModule, MatCheckboxModule, MatPaginatorModule, MatSortModule
-} from '@angular/material';
 import {ReactiveFormsModule} from '@angular/forms';
-import {Daterangepicker} from 'ng2-daterangepicker';
 import {ScrollToModule} from '@nicky-lenaers/ngx-scroll-to';
-import {ChartsModule} from "ng2-charts";
 
 import {AppRoutingModule} from './app-routing.module';
 import {SettingsService} from './services/settings.service';
@@ -44,16 +38,7 @@ import { PreloaderComponent } from './shared/preloader/preloader.component';
     HttpModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatCardModule,
-    ChartsModule,
-    MatTableModule,
-    MatSlideToggleModule,
-    MatSidenavModule,
-    MatCheckboxModule,
-    MatPaginatorModule,
-    MatSortModule,
     ReactiveFormsModule,
-    Daterangepicker,
     ScrollToModule.forRoot()
   ],
   providers: [SettingsService, HttpService, DataResolveService, DatePipe],

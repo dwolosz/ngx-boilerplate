@@ -20,22 +20,16 @@ export class PageComponent implements OnInit, OnDestroy {
 
   ngOnInit(){
 
-    this.route.params.subscribe(
-      data =>{
-        console.log(data);
-      }
-    );
-
     // sample user
-    this.user = this.route.snapshot.data['nav'][1];
+    this.user = this.route.snapshot.data['nav'][0];
 
     //updated url link parameters
     let _params = {
       userId: this.user.id,
     };
 
-    //update link parameters
-    this.router.navigate(['.'], {queryParams: _params, queryParamsHandling: 'merge'});
+    //update link parameters ( without navigating to other page)
+    this.router.navigate([], {queryParams: _params, queryParamsHandling: 'merge'});
 
     //store data in global settings
     this.settings.userData = this.user;
