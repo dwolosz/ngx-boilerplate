@@ -1,0 +1,54 @@
+@import "~assets/sass/variables";
+
+#subfooter{
+  margin-bottom:25px;
+  .row-flex{
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+  }
+  .container{
+    background: $grey-light-1;
+
+    a{
+      position: relative;
+      margin-left:20px;
+      font-size: 14px;
+      color: $grey-dark-1;
+      &:hover{
+        color: $cyan;
+      }
+      &:before{
+        content: '';
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background: $cyan;
+        position: absolute;
+        left: -20px;
+        top: 6px;
+
+      }
+    }
+
+    .logo{
+      padding-right:30px;
+    }
+  }
+
+}
+
+#footer {
+
+  background: $grey-dark-1;
+  color: white;
+  > div {
+    padding: 10px 20px;
+    text-transform: uppercase;
+    font-weight: 300;
+    a {
+      color: $grey-light-2;
+    }
+  }
+}

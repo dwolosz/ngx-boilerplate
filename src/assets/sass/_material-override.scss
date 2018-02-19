@@ -1,0 +1,164 @@
+body {
+  app-info-box {
+    width: 100%;
+    margin-bottom: 15px;
+    mat-card {
+      height: 100%;
+      margin-bottom: 0;
+    }
+  }
+
+  .mat-card {
+    width: 100%;
+    font-family: 'Open Sans', "Helvetica Neue", sans-serif;
+    .card-wrapper {
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  .mat-checked {
+    color: $cyan;
+  }
+
+  .mat-paginator {
+    min-height: 5px;
+
+    .mat-button .mat-button-focus-overlay, .mat-icon-button .mat-button-focus-overlay, .mat-button-ripple-round {
+      min-width: 33px;
+      min-height: 20px;
+    }
+
+    .mat-icon-button {
+      height: 35px;
+    }
+    .mat-form-field-underline {
+      bottom: 1px;
+    }
+
+    .mat-paginator-increment, .mat-paginator-decrement {
+      border-width: 1px;
+    }
+
+    .mat-form-field-infix {
+      border-top-width: 0;
+    }
+    .mat-form-field-wrapper {
+      padding-bottom: 0;
+    }
+    .mat-icon-button {
+      width: 25px;
+    }
+    .mat-paginator-range-label {
+      margin: 0 15px;
+    }
+  }
+
+  mat-slide-toggle {
+    .mat-slide-toggle-content {
+      font-size: 14px;
+    }
+
+    .mat-slide-toggle-thumb-container {
+      top: 0;
+    }
+
+    .mat-slide-toggle-thumb {
+      background-color: $grey-light-2;
+      width: 16px;
+      height: 16px;
+    }
+
+    &.mat-checked:not(.mat-disabled) .mat-slide-toggle-thumb {
+      background-color: $cyan !important;
+    }
+
+    &.mat-checked:not(.mat-disabled) .mat-slide-toggle-bar {
+      background-color: $gray-dark !important;
+    }
+
+    .mat-slide-toggle-bar {
+      height: 16px;
+      width: 31px;
+      border-radius: 30px;
+    }
+  }
+
+
+  .row .mat-card {
+    padding: 20px;
+    margin-bottom: 15px;
+    background-color: $grey-light-2;
+    box-shadow: none !important;
+    @include myTransition(all, ease-in, 0.3s);
+
+    &.hasLink:hover {
+      transform: scale(1.05);
+      cursor: pointer;
+      .mat-card-title {
+        color: $blue-2 !important;
+      }
+      @media (max-width: $screen-md-min){
+        transform: scale(.98);
+      }
+    }
+    .mat-card-title {
+      font-weight: 300;
+      @include myTransition(all, ease-in, 0.3s);
+      font-size: 25px;
+      line-height: 25px;
+      margin-bottom: 15px;
+      color: black;
+      .icon{
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size:26px;
+        color: $grey-1;
+      }
+    }
+    .mat-card-content {
+      font-size: 12px;
+    }
+    .mat-card-subtitle {
+      font-size: 40px;
+      line-height: 40px;
+      margin-bottom: 15px;
+      font-weight: 300;
+      color: $font-color;
+
+      sub, sup {
+        font-size: 16px;
+        font-weight: 400;
+        bottom: 0;
+      }
+    }
+    ul {
+      margin-left: 0;
+      padding-left: 0;
+      li {
+        list-style: none;
+        position: relative;
+        padding-left: 15px;
+        margin-bottom: 5px;
+        color: $cyan;
+        &:before {
+          position: absolute;
+          content: '';
+          top: 6px;
+          border-radius: 50%;
+          left: 1px;
+          width: 5px;
+          height: 5px;
+          background: grey;
+        }
+      }
+    }
+  }
+
+  .mat-sort-header-button{
+    word-break: normal;
+  }
+}
+

@@ -1,10 +1,16 @@
 @import 'vendors';
+
 @import 'variables';
 @import 'mixins';
 @import 'typography';
-@import 'fonts';
+@import 'webfont-icons';
+@import 'material-override';
+@import 'preloader';
 @import 'flex-grid';
-@import 'layout';
+@import 'common';
 @import 'buttons';
 
 
+//Material theme init ( must be last )
+$theme: mat-light-theme($primary-mat, $accent-mat, $warn-mat);
+@include angular-material-theme($theme);

@@ -1,0 +1,15 @@
+<a (click)="toggleDropdown()">
+  <i class="icon icon-chevron-right"></i>
+</a>
+
+<div class="dropdown" @fadeAnimation *ngIf="showDropdown" (mouseleave)="toggleDropdown()">
+  <div class="shadow">
+    <i class="fa fa-search pull-right"></i>
+    <input type="text" [(ngModel)]="searchText" placeholder="select site" [formControl]="myControl" #focusOnInput>
+    <ul>
+      <li *ngFor="let site of sites | filter: searchText ">
+        <a [routerLink]="'/site/'+[site.id]">{{site.title}}</a>
+      </li>
+    </ul>
+  </div>
+</div>

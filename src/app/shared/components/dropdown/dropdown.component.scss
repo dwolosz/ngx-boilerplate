@@ -1,0 +1,46 @@
+@import "~assets/sass/variables";
+
+.dropdown {
+  position: absolute;
+  padding-top: 25px;
+  top:0;
+  z-index: 222;
+
+  background: none;
+  .shadow{
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+  }
+  .fa-search {
+    top: 38px;
+    right: 5px;
+    color: $blue;
+    position: absolute;
+  }
+
+  ul {
+    background: $grey-light-1;
+    list-style: none;
+    margin: 0;
+    li {
+      padding: 7px 15px;
+      font-size: 14px;
+      font-weight: normal;
+      margin-bottom:0;
+      &:before {
+        display: none;
+      }
+      list-style: none;
+    }
+    a {
+      color: $font-color;
+      &:hover {
+        color: $blue-2;
+      }
+    }
+  }
+
+  input {
+    padding: 10px 15px;
+    font-weight: lighter;
+  }
+}

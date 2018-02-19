@@ -1,6 +1,33 @@
 .btn{
+  border-radius:0;
   .primary{
     color: $primary;
   }
 }
 
+.btn-default[disabled]:hover{
+  background: $grey-light-1;
+}
+
+.btn-default.btn-icon{
+  background: $grey-light-2;
+  margin: 0 0 0 15px;
+  padding: 5px 45px 5px 25px;
+  border: none;
+  position: relative;
+  transition: all ease-in 0.4s;
+  .icon{
+    position: absolute;
+    top: 0;
+    right:0;
+    background: $cyan;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    color: white;
+  }
+  &:hover{
+    background: $cyan;
+    color: white;
+  }
+}

@@ -18,7 +18,6 @@ Run `ng build` or `ng build --dev` for build in development mode. For more infor
 ### Build for test server
 Run `ng build --test` for build in test mode and work on the test server
 
-
 ### Build for production
 Run `ng build --prod` for build in production mode. ( enables AOT, uses environment production, removes sourcemaps ect.)
 

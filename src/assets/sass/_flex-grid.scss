@@ -1,9 +1,21 @@
 
 
+.row{
+  margin-left:-22px;
+  margin-right: -22px;
+}
+
+.table-row{
+  padding:0 5px;
+}
+
 .row-flex {
   display: flex;
   flex-wrap: wrap;
-  div[class*='col-'], .col-flex {
+  //margin-left:-15px;
+  //margin-right: -15px;
+
+  > div[class*='col-'], .col-flex {
     padding-left: 7px;
     padding-right: 8px;
     display: flex;
@@ -19,8 +31,14 @@
   }
 }
 
+.flex{
+  flex: 1;
+  &.flex-2{
+    flex: 2;
+  }
+}
+
 @media (max-width: $screen-md-min){
-  //disable flex on mobile
   .row-flex {
     display: block;
     div [class *= 'col-' ], .col-flex {

@@ -1,0 +1,53 @@
+body {
+  color: $font-color;
+  font-family:  'Open Sans', "Helvetica Neue", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  overflow-y: scroll;
+  height: 100%;
+
+
+}
+
+app-root{
+  > .container{
+  min-height: calc(100vh - 70px);
+  }
+}
+
+a {
+  color: $link;
+  cursor: pointer;
+  @include transition(all, ease-in, 0.3s);
+  &:hover {
+    color: $link-hover;
+    text-decoration: none;
+  }
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+
+.page-content {
+  display: block;
+  position: relative;
+}
+
+.container {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.no-padding{
+  padding: 0 !important;
+}

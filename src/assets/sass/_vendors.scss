@@ -1,10 +1,6 @@
-/**************************************************
-*
-*              Bootstrap type import
-*
- **************************************************/
 
 // Core variables and mixins
+
 @import "~bootstrap-sass/assets/stylesheets/bootstrap/variables";
 @import "~bootstrap-sass/assets/stylesheets/bootstrap/mixins";
 
@@ -20,6 +16,15 @@
 // Utility classes
 @import "~bootstrap-sass/assets/stylesheets/bootstrap/utilities";
 @import "~bootstrap-sass/assets/stylesheets/bootstrap/responsive-utilities";
+
+$fa-font-path: "//netdna.bootstrapcdn.com/font-awesome/4.7.0/fonts"; // for referencing Bootstrap CDN font files directly
+//$fa-font-path: "~assets/fonts/";
+@import "~font-awesome/scss/font-awesome";
+
+
+//Material theme
+@import '~@angular/material/theming';
+@include mat-core();
 
 
 
