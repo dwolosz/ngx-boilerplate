@@ -1,16 +1,46 @@
-@import 'vendors';
+/**
+  List of namespaces:
 
-@import 'variables';
-@import 'mixins';
-@import 'typography';
-@import 'webfont-icons';
-@import 'material-override';
-@import 'preloader';
-@import 'flex-grid';
-@import 'common';
-@import 'buttons';
+  .l-: layouts
+  .o-: objects
+  .c-: components
+  .js: JavaScript hooks
+  .is-|.has-: state classes
+  .t1|.s1: typography sizes
+  .u-: utility classes
+
+  source: https://zellwk.com/blog/css-architecture-2/#global-layouts
+ */
 
 
-//Material theme init ( must be last )
-$theme: mat-light-theme($primary-mat, $accent-mat, $warn-mat);
-@include angular-material-theme($theme);
+/**
+ * Libraries and helpers
+ */
+@import 'lib/lib';
+@import 'lib/custom-webfont-icons';
+@import 'helpers/helpers';
+
+/**
+ * Variables
+ */
+@import 'variables/colors';
+@import 'variables/theme';
+@import 'variables/typography';
+@import 'variables/breakpoints';
+
+/**
+ * Variables
+ */
+@import 'layouts/layouts';
+
+/**
+ * Objects
+ */
+@import 'objects/buttons';
+@import 'objects/preloader';
+@import 'objects/typography';
+
+/**
+ * Utilities
+ */
+@import 'utilities';

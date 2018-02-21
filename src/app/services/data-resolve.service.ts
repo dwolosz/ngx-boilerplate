@@ -14,22 +14,8 @@ export class DataResolveService implements Resolve<any> {
 
   resolve(route: ActivatedRouteSnapshot) {
     this.routeParams = route.queryParams;
-    // Detect which page should be loaded, if link empty load default dashboard
+    return;
 
-    return Observable.forkJoin([
-        this.http.getHttpRequest('ReadNavigation', this.settings.contextQueryBase),
-        this.http.getHttpRequest('ReadCalendarRange', this.settings.contextQueryBase)
-      ]
-    ).toPromise()
-      .then(
-        data => {
-
-          return data[0];
-        }
-      )
-      .catch(e => {
-        console.log('error', e);
-      });
   }
 
 }

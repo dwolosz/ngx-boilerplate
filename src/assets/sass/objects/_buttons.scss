@@ -1,0 +1,10 @@
+.btn{
+  border-radius:0;
+  .primary{
+    color: $primary-color;
+  }
+}
+
+.btn-default[disabled]:hover{
+  background: $grey-30;
+}

@@ -1,7 +1,7 @@
-@import "~assets/sass/variables";
+@import "~assets/sass/variables/colors";
 
 .navbar{
-  background: $grey-dark-1;
+  background: $grey-50;
   min-height: 35px;
   color: white;
   a{

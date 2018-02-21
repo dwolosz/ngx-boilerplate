@@ -1,0 +1,7 @@
+//CSS Animation
+@mixin transition($transition, $easing, $time){
+  -webkit-transition: $transition $easing $time;
+  -moz-transition: $transition $easing $time;
+  -o-transition: $transition $easing $time;
+  transition: $transition $easing $time;
+}

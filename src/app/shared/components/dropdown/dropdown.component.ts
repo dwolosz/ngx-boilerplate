@@ -2,7 +2,6 @@ import {
   AfterViewInit, Component, ElementRef, Input, OnInit, ViewChild
 } from '@angular/core';
 import {FormControl} from '@angular/forms';
-import {BreadCrumbItem} from '../../models/breadcrumbItem';
 import {HttpService} from '../../../services/http.service';
 import {SettingsService} from '../../../services/settings.service';
 import {fadeAnimation} from '../../animations/fade.animation';
@@ -21,7 +20,7 @@ export class DropdownComponent implements OnInit, AfterViewInit {
   @ViewChild('focusOnInput') private inputTest: ElementRef;
 
   public showDropdown: any = false;
-  public sites: BreadCrumbItem[];
+  public sites: any[];
 
   public toggleDropdown(): void {
     this.showDropdown = !this.showDropdown;
