@@ -19,6 +19,4 @@ export class HttpService {
   getContextQueryBaseData(apiMethodName: string, query: any) {
     return this.getHttpRequest(apiMethodName, query);
   }
-
-
 }

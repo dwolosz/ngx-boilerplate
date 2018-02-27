@@ -6,15 +6,16 @@ import {DatePipe} from '@angular/common';
 export class SettingsService {
 
   public contextQueryBase: any;
-  public navChanged = new EventEmitter<any>();
 
+  /**
+   * Stores all users data
+   * TODO: @Dephrecated - should use ngrx
+   * @param {DatePipe} datepipe
+   */
   constructor(private datepipe: DatePipe) {
-
-    console.log('create event', this.navChanged);
 
     // Default values
     this.contextQueryBase = {
-      type: 'Site',
       includeSubSites: false,
       startDate: this.datepipe.transform(new Date(), 'yyyy-MM-dd'),
       endDate: this.datepipe.transform(new Date(), 'yyyy-MM-dd')
