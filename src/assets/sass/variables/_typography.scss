@@ -1,0 +1,5 @@
+a{
+  @include transition(all, ease-in, .5s);
+  color: $link-color;
+  text-decoration: none;
+}

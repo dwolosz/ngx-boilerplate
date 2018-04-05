@@ -1,0 +1,17 @@
+
+
+<div class="page-content">
+  <div class="row">
+    <div class="col-md-8">
+      <h1>Dashboard site1</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias nemo nesciunt sequi tempore voluptates. Cumque ea eos, fugit quae quod saepe sequi tenetur vitae. Debitis minima nihil placeat quibusdam ratione.</p>
+    </div>
+  </div>
+  <div class="row ">
+    <div class="col-md-4" *ngFor="let item of sampleData">
+      <h2><a [routerLink]="'/details/'+item.id"  queryParamsHandling='preserve'>{{item.name}}</a></h2>
+      <p>{{item.description}}</p>
+    </div>
+  </div>
+
+</div>

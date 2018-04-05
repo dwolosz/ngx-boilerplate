@@ -5,5 +5,5 @@
 
 export const environment = {
   production: false,
-    apiUrl: 'https://jsonplaceholder.typicode.com'
+  apiUrl: 'https:/localHost/api/query/'
 };

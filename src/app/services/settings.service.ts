@@ -1,28 +1,25 @@
 import {EventEmitter, Injectable} from '@angular/core';
-import {DatePipe} from "@angular/common";
-
-import {ApiDataStatus} from "../models/api-data-status";
-import {UserData} from "../models/user";
+import {DatePipe} from '@angular/common';
 
 
 @Injectable()
 export class SettingsService {
 
-  public apiStatus: ApiDataStatus;
-  public userData: UserData;
+  public contextQueryBase: any;
 
-  ApiStatusChanged = new EventEmitter<ApiDataStatus>();
-
+  /**
+   * Stores all users data
+   * TODO: @Dephrecated - should use ngrx
+   * @param {DatePipe} datepipe
+   */
   constructor(private datepipe: DatePipe) {
-    //default values
-    this.apiStatus = {
-      isLoaded: false,
-      hasError: false
-    }
-  }
 
-  pushSiteSettings(){
-    this.ApiStatusChanged.emit();
-  }
+    // Default values
+    this.contextQueryBase = {
+      includeSubSites: false,
+      startDate: this.datepipe.transform(new Date(), 'yyyy-MM-dd'),
+      endDate: this.datepipe.transform(new Date(), 'yyyy-MM-dd')
+    };
 
+  }
 }

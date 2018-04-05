@@ -1,0 +1,13 @@
+@import "~assets/sass/variables/colors";
+#footer {
+  background: $grey-50;
+  color: white;
+  > div {
+    padding: 10px 20px;
+    text-transform: uppercase;
+    font-weight: 300;
+    a {
+      color: $white;
+    }
+  }
+}

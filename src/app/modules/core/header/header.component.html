@@ -1,0 +1,16 @@
+<div class="navbar">
+  <div class="container" >
+  <div class="row">
+    <div class="col-md-1">
+      <h4>LOGO</h4>
+    </div>
+    <div class="col-md-7">
+      <a [routerLink]="'/'"  queryParamsHandling='preserve'>Home</a>
+    </div>
+    <div class="col-md-4">
+      <label for=""><input (click)="updateSubsites()" [checked]="settingsService.contextQueryBase.includeSubSites" type="checkbox">My param</label>
+    </div>
+  </div>
+  </div>
+</div>
+
